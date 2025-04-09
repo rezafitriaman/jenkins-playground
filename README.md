@@ -7,3 +7,7 @@ Try Jenkins out
 Finished Section 1
 Finished Section 2
 Finished Section 3
+
+#### TODO
+What is DNS?
+How to change/create local DNS?
