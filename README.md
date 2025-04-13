@@ -45,4 +45,10 @@ docker exec -u root jenkins chmod 600 /tmp/remote-key
 ```
 
 **SSH from jenkins container to virtual container with remote-key, so u dont need use a password**
-`ssh -i remote-key remote_user@remote_host`
+`ssh -i /tmp/remote-key remote_user@remote_host`
+
+**To copy script-hello.sh to jenkins container /tmp/ folder**
+`docker cp ./script-hello.sh jenkins:/tmp/script-hello.sh`
+
+**To create ssh key (pub and private) on a folder where u on**
+`ssh-keygen -f remote-key`

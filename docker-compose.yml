@@ -1,9 +1,11 @@
 services:
   jenkins:
     container_name: jenkins
-    image: jenkins/jenkins
+    image: jenkins
+    build:
+      context: ./jenkins
     ports:
-      - "8081:8080"
+      - "8080:8080"
     volumes:
       - $PWD/jenkins_home:/var/jenkins_home
     networks:
@@ -12,7 +14,7 @@ services:
     container_name: remote-host
     image: remote-host
     build:
-      context: virtual-machine
+      context: ./virtual-machine
     networks:
       - net
 networks:
