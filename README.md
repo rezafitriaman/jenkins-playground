@@ -8,9 +8,13 @@ Finished Section 1
 Finished Section 2
 Finished Section 3
 
+#### 13-04-25
+Finished Section 4
+
 #### TODO
 What is DNS?
 How to change/create local DNS?
+Write Linux permission? - example 600, 700, etc 
 
 ---
 #### Note:
