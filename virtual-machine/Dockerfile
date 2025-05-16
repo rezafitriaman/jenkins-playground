@@ -1,6 +1,6 @@
 FROM fedora:latest
 
-RUN yum -y update && yum -y install openssh-server
+RUN yum -y update && yum -y install openssh-server && yum -y install postgresql && yum -y install vim-enhanced
 
 RUN useradd remote_user && \
     echo "Admin" | passwd remote_user --stdin && \

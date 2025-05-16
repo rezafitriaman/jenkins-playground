@@ -6,7 +6,7 @@
 ---
 
 `RUN yum -y install openssh-server`
-- Purpose: Installs the OpenSSH server package.
+- Purpose: Install the OpenSSH server package.
 - Details:
   - `yum`: Fedora's package manager (like `apt` for Ubuntu).
   - `-y`: Automatically answers "yes" to prompts (non-interactive mode).

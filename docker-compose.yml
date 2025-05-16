@@ -11,10 +11,23 @@ services:
     networks:
       - net
   remote_host:
-    container_name: remote-host
+    container_name: remote_host_jenkins
     image: remote-host
     build:
       context: ./virtual-machine
+    volumes:
+      - $PWD/virtual-machine/script.sh:/tmp/script.sh
+    networks:
+      - net
+  db_host:
+    container_name: db_postgresql_jenkins
+    image: postgres:14.17-bookworm
+    environment:
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5432:5432"
+    volumes:
+      - $PWD/postgresql_data:/var/lib/postgresql/data
     networks:
       - net
 networks:

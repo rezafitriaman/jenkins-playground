@@ -9,3 +9,5 @@ RUN chown jenkins:jenkins /tmp/remote-key
 RUN chmod 600 /tmp/remote-key
 
 USER jenkins
+
+# To loggin use admin - Admin
