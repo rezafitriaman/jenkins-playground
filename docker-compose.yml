@@ -19,6 +19,15 @@ services:
       - $PWD/virtual-machine/script.sh:/tmp/script.sh
     networks:
       - net
+  remote_host_second:
+    container_name: remote_host_second_jenkins
+    image: remote-host-second
+    build:
+      context: ./virtual-machine-second
+    volumes:
+      - $PWD/virtual-machine-second/data:/home/reza/data
+    networks:
+      - net
   db_host:
     container_name: db_postgresql_jenkins
     image: postgres:14.17-bookworm

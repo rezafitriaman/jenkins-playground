@@ -40,3 +40,9 @@ docker exec -u root jenkins chmod 600 /tmp/remote-key
 
 **To remove a working container:**
 `docker rm -fv remote_host_jenkins`
+
+**U can log in to container as root to fix permissions**
+`docker exec -u 0 -it jenkins-container bash`
+
+**U can inspect docker container and image with:**
+docker inspect <contanerName> | <imageName>

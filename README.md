@@ -14,6 +14,9 @@ Finished Section 4
 #### 16-05-25
 Need to Finished Section 5.
 
+#### 21-05-25
+Finished Section 5
+
 #### TODO
 What is DNS?
 How to change/create local DNS?
