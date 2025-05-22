@@ -16,6 +16,10 @@ Need to Finished Section 5.
 
 #### 21-05-25
 Finished Section 5
+Finished Section 6-57
+
+### 22-05-25
+Finished Section 6-60
 
 #### TODO
 What is DNS?

@@ -1,9 +1,9 @@
 services:
   jenkins:
-    container_name: jenkins
-    image: jenkins
+    container_name: jenkins-ansible
+    image: jenkins-ansible
     build:
-      context: ./jenkins
+      context: ./jenkins-ansible
     ports:
       - "8080:8080"
     volumes:
