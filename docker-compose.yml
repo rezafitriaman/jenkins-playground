@@ -39,5 +39,16 @@ services:
       - $PWD/postgresql_data:/var/lib/postgresql/data
     networks:
       - net
+  web:
+    container_name: web_jenkins
+    image: ansible-web
+    build:
+      context: ./jenkins-ansible/web
+    ports:
+      - "80:80"
+    volumes:
+      - $PWD/jenkins-ansible/web/www/html:/var/www/html
+    networks:
+      - net
 networks:
   net:

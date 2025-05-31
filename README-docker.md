@@ -46,3 +46,9 @@ docker exec -u root jenkins chmod 600 /tmp/remote-key
 
 **U can inspect docker container and image with:**
 docker inspect <contanerName> | <imageName>
+
+**How to check Existing Containers:**
+docker ps -a | grep my-postgres
+
+**Stop and remove if a container exist:**
+docker stop my-postgres 2>/dev/null && docker rm my-postgres 2>/dev/null

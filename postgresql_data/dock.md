@@ -7,10 +7,12 @@
 \c postgres - Switch to 'postgres' database
 \dt - List tables
 \q - Exit
+\d table - Table info
+\d+ table - Extended table info 
 SELECT version(); - Check PostgreSQL version
 
 **Connect to PostgreSQL from inside the `remote-host` container:**
-`psql -h db_postgresql_jenkins -U postgres -W`
+`psql -h db_host -U postgres -W`
 
 -h db_postgresql_jenkins: Connects to the PostgreSQL container by its hostname (Docker resolves this automatically if both containers are on the same network).
 -U postgres: Uses the PostgreSQL superuser.
@@ -30,18 +32,34 @@ docker inspect remote-host_jenkins | grep NetworkMode
 Tip: or use `| fzf`
 
 **Create table**
-CREATE TABLE info (
+```CREATE TABLE info (
     name VARCHAR(20),
     lastname    VARCHAR(20),
     age     SMALLINT
 );
+```
 
 **Insert into table**
+```
 INSERT INTO info VALUES(
     'reza',
     'fitriaman',
     '38'
 );
+```
+
+**Insert into table from another container**
+```
+psql -h db_host -U postgres -d people -c "INSERT INTO register(id, username, lastname, age) VALUES (999, 'master', 'fitriaman', 38);"
+```
+
+**SQL-standard Command for showing table info**
+-- Show columns (information_schema)
+```
+SELECT column_name, data_type
+FROM information_schema.column
+WHERE table_name = 'register';
+```
 
 **Show rows/data**
 SELECT * FROM info;
@@ -60,3 +78,6 @@ To restore dump file:
 
 For more info:
 (more info)[https://www.geeksforgeeks.org/how-to-dump-and-restore-postgresql-database/]
+
+**Count file in bash**
+[Example](https://www.baeldung.com/linux/bash-count-lines-in-file)

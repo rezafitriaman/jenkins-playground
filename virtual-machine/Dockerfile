@@ -16,6 +16,6 @@ RUN chown remote_user:remote_user -R /home/remote_user/.ssh/ && \
 
 RUN ssh-keygen -A
 
-USER remote_user
-
 CMD /usr/sbin/sshd -D
+
+USER remote_user

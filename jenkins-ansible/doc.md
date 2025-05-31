@@ -48,3 +48,48 @@ or both at once:
 ```
 ansible -i hosts -m ping test
 ```
+
+**Start ansible-playbook:**
+ansible-playbook -i hosts play.yml
+
+---
+
+**If u get this error:**
+```
+FATAL: Cannot run program "ansible-playbook": error=2, No such file or directory
+java.io.IOException: error=2, No such file or directory
+```
+This happend because Jenkins cannot find `ansible-playbook` executable in *PATH environment* when executing the job.
+
+U need to tell Jenkins where the Ansible executables are located, by configuring it in Global Tool Configuration.
+
+- Step1:
+Log into Jenkins container or host and run:
+```
+which ansible-playbook
+```
+- Step2:
+Go to Global Tool Configuration in Jenkins then go to Ansible installations section.
+
+- Step3:
+Add the name and the Path to ansible executables directory.
+```
+Name: AnsibleLocal
+Path: /var/jenkins_home/.local/bin
+```
+
+##### Optional:
+U can also add the path to ~/.bashrc or ~/.profile
+```
+export PATH=$PATH:/var/jenkins_home/.local/bin
+```
+then restart the jenkins container
+```
+docker restart <jenkins-container-name>
+```
+
+---
+
+##### Linux Command:
+**Sed:**
+[How to use sed](https://www.geeksforgeeks.org/sed-command-in-linux-unix-with-examples/)

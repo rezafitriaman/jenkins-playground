@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Usage: ./backup_db.sh dbname hostname password
+# Usage: ./script.sh dbname hostname password
 
 if [ "$#" -ne 3 ]; then
         echo "usage: $0 <dbname> <hostname> <password>"

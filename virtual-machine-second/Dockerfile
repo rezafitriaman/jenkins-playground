@@ -16,6 +16,6 @@ RUN chown reza:reza -R /home/reza/.ssh && \
 
 RUN ssh-keygen -A
 
-USER reza
-
 CMD /usr/sbin/sshd -D
+
+USER reza
