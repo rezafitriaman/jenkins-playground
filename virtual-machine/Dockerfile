@@ -16,6 +16,6 @@ RUN chown remote_user:remote_user -R /home/remote_user/.ssh/ && \
 
 RUN ssh-keygen -A
 
-CMD /usr/sbin/sshd -D
-
-USER remote_user
+# This command starts the SSH server and keeps it running in the foreground so that the
+# container stays alive and can accept SSH connections.
+CMD ["/usr/sbin/sshd", "-D"]

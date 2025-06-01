@@ -1,6 +1,6 @@
 services:
   jenkins:
-    container_name: jenkins-ansible
+    container_name: jenkins_ansible
     image: jenkins-ansible
     build:
       context: ./jenkins-ansible
@@ -16,7 +16,7 @@ services:
     build:
       context: ./virtual-machine
     volumes:
-      - $PWD/virtual-machine/script.sh:/tmp/script.sh
+      - $PWD/virtual-machine/data:/home/remote_user/data
     networks:
       - net
   remote_host_second:

@@ -3,7 +3,7 @@ FROM remote-host
 # Switch to root to install system packages
 USER root
 
-RUN yum -y install nginx php-fpm php-mysqlnd
+RUN yum -y install nginx php-fpm php-pgsql
 
 EXPOSE 80 443
 
@@ -15,7 +15,4 @@ COPY ./bin/start.sh /start.sh
 
 RUN chmod +x /start.sh
 
-CMD /start.sh
-
-# Then optionally switch back to remote_user if needed
-USER remote_user
+CMD ["/start.sh"]

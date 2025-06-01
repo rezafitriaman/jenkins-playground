@@ -50,7 +50,7 @@ INSERT INTO info VALUES(
 
 **Insert into table from another container**
 ```
-psql -h db_host -U postgres -d people -c "INSERT INTO register(id, username, lastname, age) VALUES (999, 'master', 'fitriaman', 38);"
+psql -h db_host -U postgres -d people -c "INSERT INTO register(id, name, lastname, age) VALUES (999, 'master', 'fitriaman', 38);"
 ```
 
 **SQL-standard Command for showing table info**
