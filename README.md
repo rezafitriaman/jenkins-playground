@@ -25,7 +25,12 @@ Finished Section 6-60
 Finished Section 6-67
 
 ### 24-05-25
-Finished Section 6-74
+Finished Section 6-76
+
+### 05-06-25
+Finished Section 6
+Finished Section 7
+
 
 
 

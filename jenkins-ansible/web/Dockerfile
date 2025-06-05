@@ -3,9 +3,9 @@ FROM remote-host
 # Switch to root to install system packages
 USER root
 
-RUN yum -y install nginx php-fpm php-pgsql
+RUN yum -y update && yum -y install nginx php-fpm php-pgsql
 
-EXPOSE 80 443
+EXPOSE 80 443 22
 
 VOLUME /var/www/html /var/log/nginx /var/log/php-fpm /var/lib/php-fpm
 

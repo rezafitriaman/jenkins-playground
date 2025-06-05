@@ -50,7 +50,15 @@ ansible -i hosts -m ping test
 ```
 
 **Start ansible-playbook:**
+```
 ansible-playbook -i hosts play.yml
+```
+
+**Start ansible-playbook with a variable**
+```
+ansible-playbook -i hosts people.yml -e "PEOPLE_AGE=25"
+```
+
 
 ---
 
@@ -68,6 +76,8 @@ Log into Jenkins container or host and run:
 ```
 which ansible-playbook
 ```
+[doc](https://www.geeksforgeeks.org/which-command-in-linux-with-examples/)
+
 - Step2:
 Go to Global Tool Configuration in Jenkins then go to Ansible installations section.
 
