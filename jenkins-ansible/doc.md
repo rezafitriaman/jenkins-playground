@@ -103,3 +103,26 @@ docker restart <jenkins-container-name>
 ##### Linux Command:
 **Sed:**
 [How to use sed](https://www.geeksforgeeks.org/sed-command-in-linux-unix-with-examples/)
+
+---
+
+##### To trigger a job using curl or extern methode, u need to use API Token
+- Login with the user u want to use
+- Create an API Token under the security tab
+- Copy the job link button
+
+** Example how to use API Token to start a job**
+curl \
+-u ega:110bec899e4015ca60b34855f28ee46836 \
+-X POST http://localhost:8080/job/Environment-variable-global/build?delay=0sec
+
+**Example how to use API Token to start a job with parameter**
+curl http://localhost:8080/job/ansible-users-db/buildWithParameters \
+--user ega:110bec899e4015ca60b34855f28ee46836 \
+--data AGE=24
+
+OR
+
+curl \
+-u ega:110bec899e4015ca60b34855f28ee46836 \
+-X POST http://localhost:8080/job/ansible-users-db/buildWithParameters?AGE=23&delay=0sec
