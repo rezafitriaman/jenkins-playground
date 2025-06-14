@@ -52,3 +52,8 @@ docker ps -a | grep my-postgres
 
 **Stop and remove if a container exist:**
 docker stop my-postgres 2>/dev/null && docker rm my-postgres 2>/dev/null
+
+---
+
+**Simple maven project**
+[Link](https://github.com/jenkins-docs/simple-java-maven-app/tree/master)

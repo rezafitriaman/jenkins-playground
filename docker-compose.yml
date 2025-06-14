@@ -50,5 +50,20 @@ services:
       - $PWD/jenkins-ansible/web/www/html:/var/www/html
     networks:
       - net
+  gitlab:
+    image: gitlab/gitlab-ee:latest
+    container_name: gitlab
+    platform: linux/amd64
+    ports:
+      - '8090:80'
+      - '443:443'
+      - '22:22'
+    volumes:
+      - $PWD/gitlab_home/config:/etc/gitlab
+      - $PWD/gitlab_home/logs:/var/log/gitlab
+      - $PWD/gitlab_home/data:/var/opt/gitlab
+    shm_size: '256m'
+    networks:
+      - net
 networks:
   net:

@@ -2,5 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/gitlab-container/java" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/gitlab-container/simple-java-maven-app" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/jenkins_home/workspace/maven-job" vcs="Git" />
   </component>
 </project>
