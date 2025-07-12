@@ -44,7 +44,10 @@ Finished Section 11-118
 ### 22-06-25
 Finished Section 11
 
-
+### 05-07-25
+Finished section 11-131
+Skipped Section 11-132
+Finished Section 11-133
 
 #### TODO
 What is DNS?

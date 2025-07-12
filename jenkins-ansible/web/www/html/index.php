@@ -33,7 +33,7 @@
         die("Connection failed: " . pg_last_error());
     }
 
-    $sql = "SELECT id, name, lastname, age FROM register  where age = 24 ";
+    $sql = "SELECT id, name, lastname, age FROM register  where age = 23 ";
     $result = pg_query($conn, $sql);
 
     if (pg_num_rows($result) > 0) {
