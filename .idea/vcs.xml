@@ -3,7 +3,9 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/gitlab-container/java" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/jenkins-ansible/gitLab-repo/dsl-jobs" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/jenkins_home/workspace/job_dsl_created" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/jenkins_home/workspace/maven-job" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/jenkins_home/workspace/maven-job-dsl-version" vcs="Git" />
   </component>
 </project>
