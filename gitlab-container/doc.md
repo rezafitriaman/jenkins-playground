@@ -78,7 +78,7 @@ tar -cf custom_hooks.tar custom_hooks
 3. Get the Repo Info
 You need three things:
 
-What	How to Get It
+How to Get It
 --storage	    Usually default (check /etc/gitlab/gitlab.rb)
 --repository	The path relative to Gitaly’s storage (e.g. @hashed/4b/22/...git)
 --config	    Usually: /var/opt/gitlab/gitaly/config.toml

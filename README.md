@@ -52,6 +52,9 @@ Finished Section 11-133
 ### 13-07-25
 Finished Section 11-135
 
+### 16-07-25
+Finished Section 11-136
+
 #### TODO
 What is DNS?
 How to change/create local DNS?
