@@ -45,15 +45,23 @@ Finished Section 11-118
 Finished Section 11
 
 ### 05-07-25
-Finished section 11-131
-Skipped Section 11-132
-Finished Section 11-133
+Finished section 12-131
+Skipped Section 12-132
+Finished Section 12-133
 
 ### 13-07-25
-Finished Section 11-135
+Finished Section 12-135
 
 ### 16-07-25
-Finished Section 11-136
+Finished Section 12-136
+
+### 24-07-25
+Finished Section 13-140
+Finished Section 14-144
+
+### 29-07-25
+Finished Section 14-148
+Finished Section 14-150
 
 #### TODO
 What is DNS?
