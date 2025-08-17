@@ -1,0 +1,6 @@
+services:
+  app:
+    image: 'app-java-jar:$BUILD_TAG'
+    build:
+      context: .
+      dockerfile: Dockerfile

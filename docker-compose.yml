@@ -30,6 +30,19 @@ services:
       - $PWD/virtual-machine-second/data:/home/reza/data
     networks:
       - net
+  remote_host_third:
+    container_name: remote_host_third_jenkins
+    image: remote_host_third
+    build:
+      context: ./virtual-machine-third
+    volumes:
+      - ./virtual-machine-third/data:/home/deepChinchilla/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "2222:22"
+    user: root
+    networks:
+      - net
   db_host:
     container_name: db_postgresql_jenkins
     image: postgres:14.17-bookworm
