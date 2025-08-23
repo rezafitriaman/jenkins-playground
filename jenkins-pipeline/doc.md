@@ -164,3 +164,30 @@ Command:
 ```
 docker run --rm -v $PWD/java-app:/app -v $PWD/.m2/:/root/.m2/ -w /app maven:3.9.9-ibm-semeru-21-noble mvn test
 ```
+
+##### Docker Hub
+**Login to Docker HUB**
+```
+docker login
+```
+
+**Push image to your Repository**
+```
+docker images
+```
+
+**Tag local docker image - so u can push to docker Hub**
+```
+docker tag <local_repo_name>:tag rezafitriaman/<repo_name>:tag
+```
+
+**Push docker image to docker Hub**
+```
+docker push <repo_name>:tag
+```
+
+**Pull docker image**
+```
+docker pull <repo_name>:tag
+```
+ 

@@ -99,8 +99,13 @@ su deepChinchilla
 ```
 
 ##### SSH into container
-**From local machine**
 *U need to expose the port to 2222*
+```
+ports:
+      - "2222:22"
+```
+
+**From local machine**
 ```
 ssh -i .ssh/id_rsa deepChinchilla@localhost -p 2222
 ```
@@ -109,4 +114,11 @@ ssh -i .ssh/id_rsa deepChinchilla@localhost -p 2222
 *U need to use default port or the native container port*
 ```
 ssh deepChinchilla@remote_host_third -p 22
+```
+
+##### Bind-mounts the Host's Docker socket into the virtual container
+This means the container doesn'need its own Docker daemon - it can just talk to host's daemon using `docker` CLI inside.
+```
+volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
 ```
