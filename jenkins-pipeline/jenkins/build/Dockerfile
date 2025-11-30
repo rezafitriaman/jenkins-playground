@@ -1,4 +1,4 @@
-FROM openjdk:25-ea-21-slim-bullseye
+FROM amazoncorretto:21.0.7-alpine3.21
 
 RUN mkdir /app
 

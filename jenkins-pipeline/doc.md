@@ -58,6 +58,10 @@ It wil use `$PWD/java-app` and `$PWD/.m2` as bind-mount volume on your local fol
 ```
 ./jenkins/build/mvn.sh mvn -B -DskipTests clean package
 ```
+*Then `.jar` is crated on `./java-app/target/*.jar`, U need to copy this to `./jenkins/build` folder*
+```
+cp -f ./java-app/target/*.jar ./jenkins/build     
+```
 
 **Maven Package**
 ```
@@ -172,22 +176,35 @@ docker login
 ```
 
 **Push image to your Repository**
+*So to push image to your Docker repository u need to give your local image a tag-name then u can push that image to your repo-name(rezafitriaman)*
 ```
 docker images
 ```
 
 **Tag local docker image - so u can push to docker Hub**
 ```
-docker tag <local_repo_name>:tag rezafitriaman/<repo_name>:tag
+docker tag <local_image_name>:tag <repo_name>/<custom_image_name>:tag
 ```
 
 **Push docker image to docker Hub**
 ```
-docker push <repo_name>:tag
+docker push <repo_name>/custom_image_name:tag
 ```
 
 **Pull docker image**
 ```
-docker pull <repo_name>:tag
+docker pull <repo_name>/custom_image_name:tag
 ```
- 
+
+##### Copy file to remote machine using ssh 
+```
+scp -i .ssh/id_rsa -P 2222 /tmp/.auth deepChinchilla@localhost:/tmp/.auth
+```
+
+##### Provide a password using STDIN (--password-stdin)
+To run `docker login` command non-interactively, you can set the `--password-stdin` flag to provide a password through `STDIN`.
+```
+cat ~/my_password.txt | docker login --username foo --password-stdin
+```
+
+[More info](https://docs.docker.com/reference/cli/docker/login/)

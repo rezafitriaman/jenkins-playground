@@ -1,6 +1,6 @@
 services:
   app:
-    image: 'app-java-jar:$BUILD_TAG'
+    image: 'maven-project-tutorial-jenkins:$BUILD_TAG'
     build:
       context: .
       dockerfile: Dockerfile
