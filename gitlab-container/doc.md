@@ -14,25 +14,30 @@ Password root: epu6exvT1tB4EEbQbV22nUtGvhRzRf/VopBBYfoUOYQ=
 - Create an API Token under the security tab
 - Copy the job link button
 
-** Example user on gitlab **
+**Example user on gitlab**
 user: deepChinchilla
 ww: deep12345678
 
-** Example user on Jenkins **
+**How to look gitlab config**
+cat .git/config
+or
+git config --local --list
+
+**Example user on Jenkins**
 user: fitriaman
 ww: fitriaman
 
-** Example how to use API Token to start a job**
+**Example how to use API Token to start a job**
 curl \
 -u fitriaman:11fdd7059beeb43492e25b33711b412d20 \
 -X POST http://localhost:8080/job/maven-job/build?delay=0sec
 
-** Or From gitlab container **
+**Or From gitlab container**
 curl \
 -u fitriaman:11fdd7059beeb43492e25b33711b412d20 \
 -X POST http://jenkins:8080/job/maven-job/build?delay=0sec
 
-** jenkins/java Relative path:**
+**jenkins/java Relative path:**
 u find @hashed path in the Admin section and project under Relative path.
 ```
 @hashed/4b/22/4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a.git
@@ -41,10 +46,10 @@ u find @hashed path in the Admin section and project under Relative path.
 Full path will be:
 /var/opt/gitlab/git-data/repositories/@hashed/4b/22/4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a.git
 
-** doc **
+**doc**
 (more info)[https://docs.gitlab.com/administration/server_hooks/]
 
-** To add post-receive command after git push and it start jenkins automatically **
+**To add post-receive command after git push and it start jenkins automatically**
 In gitLab container :
 
 ```

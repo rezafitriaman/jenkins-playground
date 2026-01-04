@@ -4,10 +4,16 @@
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/gitlab-container/java" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/jenkins-ansible/gitLab-repo/dsl-jobs" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/jenkins-pipeline" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/jenkins_home/caches/git-1664e30cce99a73cbc6f882d21bdf5bb" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/jenkins_home/caches/git-402b07a9aceb37b3d5c86029a06cd2e6" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/jenkins_home/caches/git-792a0aa4ce7c3dde083aadd840abed23" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/jenkins_home/caches/git-b8e5b9857db48b77735806c23d225684" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/jenkins_home/workspace/job_dsl_created" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/jenkins_home/workspace/maven-job" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/jenkins_home/workspace/maven-job-dsl-From-GitLab" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/jenkins_home/workspace/maven-job-dsl-version" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/jenkins_home/workspace/pipeline-docker-maven" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/jenkins_home/workspace/seed-jobs" vcs="Git" />
   </component>
 </project>

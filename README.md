@@ -81,6 +81,11 @@ Finished Section 15-166
 ### 30-11-25
 Finished Section 15-171
 
+### 07-12-25
+Finished Section 15-173
+
+### 04-01-26
+Finished all Section
 
 #### TODO
 What is DNS?
